@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hemispheres</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container" >
+      <!-- Add Jumbotron to Header -->
+      <div class="jumbotron text-center">
+        <h1>Hemispheres of Mars</h1>
+        <!-- Add a button to activate scraping script -->
+        <p><a class="btn btn-default btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      </div>
+        <!-- make a row of thumbnails out of images -->
+        <br>
+        <hr class="style2">
+        <br>
+      <div class="row">
+        <span class="border border-secondary">
+        <div class="col-sm-3">
+          <img src="{{hemisphere_challenge.hem1_url}}" class="img-thumbnail"
+          />
+        </div>
+        <div class="col-sm-3">
+          <img src="{{hemisphere_challenge.hem2_url}}" class="img-thumbnail"
+          />
+        </div>
+        <div class="col-sm-3">
+          <img src="{{hemisphere_challenge.hem3_url}}" class="img-thumbnail"
+          />
+        </div>
+        <div class="col-sm-3">
+          <img src="{{hemisphere_challenge.hem4_url}}" class="img-thumbnail"
+          />
+        </div>
+      </span>
+      </div>
+      <br>
+        <hr class="style2">
+      <br>
+      
+      <!-- Section for Hemisphere Images and title table -->
+      <div class="row" id="images_hemi">
+        <div class="col-md-12">
+          
+          <h2 class="text-center">{{ hemisphere_challenge.hem1_title | safe }}</h2>
+<br>
+          <!-- if images is False/None/non-existent, then default to error message -->
+          <img src="{{hemisphere_challenge.hem1_url}}" class="img-circle"
+            alt="{{hemisphere_challenge.hem1_url}}"
+          />
+     
+      </div>
+      
+      <div class="col-md-12">
+          
+        <h2 class="text-center">{{ hemisphere_challenge.hem2_title | safe }}</h2>
+<br>
+        <!-- if images is False/None/non-existent, then default to error message -->
+        <img src="{{hemisphere_challenge.hem2_url}}" class="img-circle"
+          alt="{{hemisphere_challenge.hem2_url}}"
+        />
+   
+    </div>
+  
+    <div class="col-md-12">
+          
+      <h2 class="text-center">{{ hemisphere_challenge.hem3_title | safe }}</h2>
+<br>
+      <!-- if images is False/None/non-existent, then default to error message -->
+      <img src="{{hemisphere_challenge.hem3_url}}" class="img-circle"
+        alt="{{hemisphere_challenge.hem3_url}}"
+      />
+ 
+  </div>
+  
+  <div class="col-md-12">
+          
+    <h2 class="text-center">{{ hemisphere_challenge.hem4_title | safe }}</h2>
+<br>
+    <!-- if images is False/None/non-existent, then default to error message -->
+    <img src="{{hemisphere_challenge.hem4_url}}" class="img-circle"
+      alt="{{hemisphere_challenge.hem4_url}}"
+    />
+
+</div>
+    </div>
+  </body>
+</html>
